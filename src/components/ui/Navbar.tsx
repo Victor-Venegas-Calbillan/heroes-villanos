@@ -15,9 +15,9 @@ export const Navbar = () => {
             isOpen ? "navbar__menu--active" : ""
           }`}
         >
-          <li className="navbar__item">Characters</li>
           <li className="navbar__item">Marvel</li>
           <li className="navbar__item">Dc</li>
+          <li className="navbar__item">Others</li>
         </ul>
 
         <div className="navbar__toggle" onClick={handleToggle}>
