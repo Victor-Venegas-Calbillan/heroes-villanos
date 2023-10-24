@@ -10,20 +10,19 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 3rem;
 }
 
 @media (min-width: 768px) {
   .heros__container {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   }
 }
 
 .hero__card {
-  width: 35rem;
+  width: 38rem;
   background-color: var(--bg-300);
   margin: 0px auto;
   border-radius: 1rem;
