@@ -1,14 +1,4 @@
-.titulo {
-  padding: 1rem 0;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 600;
-}
-
 .heros__container {
-  max-width: 120rem;
-  width: 100%;
-  margin: 0 auto;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
@@ -37,6 +27,7 @@
 
 .hero__card__title {
   font-size: 2.1rem;
+  margin-top: 2rem;
   text-align: center;
   font-weight: bold;
 }
@@ -45,6 +36,7 @@
   font-size: 1.8rem;
   list-style: none;
   padding: 1rem;
+  margin: 0;
 }
 
 .hero__info li {

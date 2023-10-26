@@ -1,3 +1,9 @@
+import { LayoutPage } from "../layout/LayoutPage";
+
 export const OtherPages = () => {
-  return <div>OtherPages</div>;
+  return (
+    <>
+      <LayoutPage title="Others publisher" />
+    </>
+  );
 };

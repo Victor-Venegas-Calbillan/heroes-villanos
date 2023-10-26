@@ -1,14 +1,14 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { HomePage } from "../pages/HomePage";
-import { DcPage } from "../pages/DcPage";
-import { MarvelPage } from "../pages/MarvelPage";
-import { OtherPages } from "../pages/OtherPages";
-import { Navbar } from "../components/ui/Navbar";
+import {
+  DcPage,
+  HomePage,
+  MarvelPage,
+  OtherPages,
+} from "../pages";
 
 export const AppRouter = () => {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dc" element={<DcPage />} />

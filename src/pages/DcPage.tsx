@@ -1,3 +1,9 @@
+import { LayoutPage } from "../layout/LayoutPage";
+
 export const DcPage = () => {
-  return <div>DcPage</div>;
+  return (
+    <>
+      <LayoutPage title="DC Comics" />
+    </>
+  );
 };
