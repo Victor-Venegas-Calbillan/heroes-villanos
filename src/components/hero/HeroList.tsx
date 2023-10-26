@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { HeroResp } from "../../api/hero";
+import { HeroResp } from "../../interfaces/hero";
 
 interface Props {
   heros: HeroResp[];
@@ -17,31 +17,31 @@ export const HeroList: FC<Props> = ({ heros }) => {
             <h3 className="hero__card__title">{hero.name}</h3>
             <ul className="hero__info">
               <li>
-                Full name:{" "}
+                Full name:
                 {hero.biography.fullName
                   ? hero.biography.fullName
                   : hero.name}
               </li>
               <li>
-                Publisher:{" "}
+                Publisher:
                 {hero.biography.publisher
                   ? hero.biography.publisher
                   : "N/A"}
               </li>
               <li>
-                Alignment:{" "}
+                Alignment:
                 {hero.biography.alignment
                   ? hero.biography.alignment
                   : "N/A"}
               </li>
               <li>race: {hero.appearance.race}</li>
               <li>
-                heigth: {hero.appearance.height[0]} or{" "}
-                {hero.appearance.height[1]}{" "}
+                heigth: {hero.appearance.height[0]} or
+                {hero.appearance.height[1]}
               </li>
               <li>
-                weight: {hero.appearance.weight[0]} or{" "}
-                {hero.appearance.weight[1]}{" "}
+                weight: {hero.appearance.weight[0]} or
+                {hero.appearance.weight[1]}
               </li>
             </ul>
             <button className="card__button">Ver mas</button>
