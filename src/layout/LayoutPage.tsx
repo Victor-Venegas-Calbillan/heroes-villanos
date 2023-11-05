@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import { Navbar } from "../components/ui/Navbar";
 
 interface Props extends PropsWithChildren {
-  title: string;
+  title?: string;
 }
 
 export const LayoutPage: FC<Props> = ({ children, title }) => {

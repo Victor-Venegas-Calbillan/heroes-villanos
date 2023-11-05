@@ -1,5 +1,6 @@
 import { PropsWithChildren, FC } from "react";
-import { HeroResp } from "../../interfaces/hero";
+import { HeroResp } from "../../interfaces/heros";
+import { NavLink } from "react-router-dom";
 
 interface Props extends PropsWithChildren {
   hero: HeroResp;
@@ -42,7 +43,9 @@ export const HeroCard: FC<Props> = ({ hero }) => {
             {hero.appearance.weight[1]}
           </li>
         </ul>
-        <button className="card__button">Ver mas</button>
+        <NavLink to={`/${hero.id}`} className="card__button">
+          Ver mas
+        </NavLink>
       </div>
     </div>
   );

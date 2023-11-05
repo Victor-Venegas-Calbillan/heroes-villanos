@@ -1,20 +1,19 @@
 import { useEffect, useState, useCallback } from "react";
-import { HeroResp } from "../interfaces/hero";
 
-type State = {
-  data: HeroResp[] | null;
+type State<T> = {
+  data: T | undefined;
   isLoading: boolean;
   error: boolean;
 };
 
-const initialState: State = {
-  data: null,
+const initialState = {
+  data: undefined,
   isLoading: true,
   error: false,
 };
 
-export const useFetch = (url: string) => {
-  const [state, setState] = useState(initialState);
+export function useFetch<T>(url: string) {
+  const [state, setState] = useState<State<T>>(initialState);
 
   const getFecth = useCallback(async () => {
     setState({
@@ -35,12 +34,12 @@ export const useFetch = (url: string) => {
 
   useEffect(() => {
     getFecth();
-    console.log("effect");
+    console.log("useFetch");
   }, [url, getFecth]);
 
   if (!state.data) {
     return {
-      data: [],
+      data: undefined,
       isLoading: true,
       error: true,
     };
@@ -51,4 +50,4 @@ export const useFetch = (url: string) => {
     isLoading: state.isLoading,
     error: state.error,
   };
-};
+}

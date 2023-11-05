@@ -1,7 +1,7 @@
-import { HeroResp } from "../interfaces/hero";
+import { HeroResp } from "../interfaces/heros";
 
 export const herosFiltered = (
-  hero: HeroResp[],
+  hero: HeroResp[] = [],
   publisher: string
 ) => {
   const herosFiltered = hero.filter(

@@ -55,14 +55,18 @@
 
 .card__button {
   background-color: var(--accent-200);
+  color: var(--bg-300);
   border: none;
   font-size: 2rem;
+  display: block;
   width: 100%;
   padding: 1rem;
   border-radius: 1rem;
   transition: all 0.3s ease;
   margin: 0rem auto;
   margin-top: 0.5rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .card__button:hover {

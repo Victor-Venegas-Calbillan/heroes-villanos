@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { HeroResp } from "../../interfaces/hero";
+import { HeroResp } from "../../interfaces/heros";
 import { HeroCard } from "./HeroCard";
 
 interface Props {
