@@ -11,13 +11,33 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <NavLink to="/" className="navbar__logo">
-          Logo
+          <picture>
+            <source
+              sizes="1920w"
+              type="image/avif"
+              srcSet="./logo.avif"
+            />
+            <source
+              sizes="1920w"
+              type="image/webp"
+              srcSet="./logo.webp"
+            />
+            <img
+              loading="lazy"
+              src="./logo.png"
+              alt="logo"
+              className="logo"
+            />
+          </picture>
         </NavLink>
         <ul
           className={`navbar__menu ${
             isOpen ? "navbar__menu--active" : ""
           }`}
         >
+          <NavLink to="/" className="navbar__item">
+            Home
+          </NavLink>
           <NavLink to="/marvel" className="navbar__item">
             Marvel
           </NavLink>
@@ -26,6 +46,9 @@ export const Navbar = () => {
           </NavLink>
           <NavLink to="/others" className="navbar__item">
             Others
+          </NavLink>
+          <NavLink to="/others" className="navbar__item">
+            Search
           </NavLink>
         </ul>
 

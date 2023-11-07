@@ -1,15 +1,15 @@
+import { FC } from "react";
 import { HeroList } from "../components/hero/HeroList";
 import { Loader } from "../components/ui/Loader";
-import { herosFiltered } from "../helper/heroFilter";
-import { useFetch } from "../hooks/useFetch";
+import { herosFiltered } from "../helper/heroFilterByPublisher";
 import { HeroResp } from "../interfaces/heros";
 import { LayoutPage } from "../layout/LayoutPage";
+interface Props {
+  data: HeroResp[];
+  isLoading: boolean;
+}
 
-export const DcPage = () => {
-  const url =
-    "https://akabab.github.io/superhero-api/api/all.json";
-  const { data, isLoading } = useFetch<HeroResp[]>(url);
-
+export const DcPage: FC<Props> = ({ data, isLoading }) => {
   const heros = herosFiltered(data, "DC Comics");
   return (
     <>

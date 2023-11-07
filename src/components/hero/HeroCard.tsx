@@ -10,7 +10,11 @@ export const HeroCard: FC<Props> = ({ hero }) => {
   return (
     <div className="hero__card">
       <div className="hero__card__header">
-        <img src={hero.images.sm} alt={hero.name} />
+        <img
+          loading="lazy"
+          src={hero.images.sm}
+          alt={hero.name}
+        />
       </div>
       <div className="hero__card__body">
         <h3 className="hero__card__title">{hero.name}</h3>

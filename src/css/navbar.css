@@ -17,7 +17,7 @@
 
 @media (min-width: 768px) {
   .navbar__logo {
-    margin: 0;
+    margin: 1rem;
   }
 }
 
@@ -34,9 +34,15 @@
   .navbar__container {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     max-width: 120rem;
   }
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
 }
 
 .navbar__menu {
@@ -67,7 +73,7 @@
     background-color: transparent;
 
     display: flex;
-    flex-basis: 20%;
+    flex-basis: 35%;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;

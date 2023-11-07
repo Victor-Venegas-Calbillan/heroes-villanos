@@ -1,21 +1,17 @@
+import { FC } from "react";
 import { HeroList } from "../components/hero/HeroList";
 import { Loader } from "../components/ui/Loader";
-import { useFetch } from "../hooks/useFetch";
 import { HeroResp } from "../interfaces/heros";
 import { LayoutPage } from "../layout/LayoutPage";
+interface Props {
+  data: HeroResp[];
+  isLoading: boolean;
+}
 
-export const HomePage = () => {
-  const url =
-    "https://akabab.github.io/superhero-api/api/all.json";
-  const { data: heros, isLoading } = useFetch<HeroResp[]>(url);
-
+export const HomePage: FC<Props> = ({ data, isLoading }) => {
   return (
     <LayoutPage title="All heros and villans">
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <HeroList heros={heros as HeroResp[]} />
-      )}
+      {isLoading ? <Loader /> : <HeroList heros={data} />}
     </LayoutPage>
   );
 };
